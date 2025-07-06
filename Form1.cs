@@ -35,7 +35,7 @@ namespace OtoparkTakip
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Listeleme hatasý: " + ex.Message);
+                MessageBox.Show("Listeleme hatasÃ½: " + ex.Message);
             }
             finally
             {
@@ -47,7 +47,7 @@ namespace OtoparkTakip
         {
             if (string.IsNullOrWhiteSpace(txtPlaka.Text))
             {
-                MessageBox.Show("Lütfen Plaka bilgisi girin.");
+                MessageBox.Show("LÃ¼tfen Plaka bilgisi girin.");
                 return;
             }
 
@@ -62,13 +62,13 @@ namespace OtoparkTakip
                 komut.Parameters.AddWithValue("@GirisTarihi", DateTime.Now);
 
                 komut.ExecuteNonQuery();
-                MessageBox.Show("Araç giriþi kaydedildi.");
+                MessageBox.Show("AraÃ§ giriÃ¾i kaydedildi.");
                 AraclariListele();
                 Temizle();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Kayýt hatasý: " + ex.Message);
+                MessageBox.Show("KayÃ½t hatasÃ½: " + ex.Message);
             }
             finally
             {
@@ -98,8 +98,8 @@ namespace OtoparkTakip
         private void btnForm2_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
-            frm2.Show(); // Yeni formu açar
-            this.Hide(); // Ýstersen Form1'i gizleyebilirsin (isteðe baðlý)
+            frm2.Show(); // Yeni formu aÃ§ar
+            this.Hide(); // Formu gizler
 
         }
     }
